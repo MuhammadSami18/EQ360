@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Raleway', sans-serif, "Helvetica Neue", Helvetica;
+}
+
+.feature {
+    font-feature-settings: "lnum";
+}
+
+.ant-layout-sider-trigger {
+    background-color: #fff !important;
+}
+
+.ant-layout-sider-trigger:hover {
+    background-color: #e5e7eb !important;
+}
+
+.anticon-left {
+    color: black !important;
+}
+
+.anticon-right {
+    color: black !important;
+}
+
+.ant-menu-item-selected {
+    color: #fff !important;
+    background: #259A75 !important;
+}
+
+.ant-menu-submenu-selected .ant-menu-submenu-title {
+    color: #259A75 !important;
+}
+
+.dashboard .ant-menu-item-active {
+    background: #e5e7eb !important;
+    color: black !important;
+}
+
+.dashboard .ant-menu-item-active::after {
+    border-bottom-color: transparent !important;
+}
+
+.dashboard .ant-menu-item-selected::after {
+    border-bottom-color: transparent !important;
+}
+.dashboard .ant-menu .ant-menu-item:first-child{
+    flex: 1;
+}
