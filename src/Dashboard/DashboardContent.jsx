@@ -8,9 +8,6 @@ const DashboardContent = () => {
     const { token: { colorBgContainer, borderRadiusLG }, } = theme.useToken();
     const text = 'This is your hub to access your Emotional Intelligence 360. You can begin, resume, view, and compare your EQ assessments. You can also have a 3rd party colleague asses your EQ and see the results.'
     const { speak } = useSpeechSynthesis();
-    const playText=()=>{
-        speak(content)
-    }
     return (
         <>
             <Row style={{ padding: 24, background: colorBgContainer, borderRadius: borderRadiusLG, }} >
