@@ -50,6 +50,6 @@ body {
 .dashboard .ant-menu .ant-menu-item:first-child{
     flex: 1;
 }
-#scrollableDiv .ant-pagination{
+/* #scrollableDiv .ant-pagination{
     display: none;
-}
+} */

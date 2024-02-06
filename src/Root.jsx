@@ -1,6 +1,6 @@
-import Navbar from './Index/Navbar'
+import Navbar from './pages/index/Navbar'
 import { Outlet } from 'react-router-dom'
-import EQFooter from './Footer/Footer'
+import EQFooter from './components/footer/Footer'
 
 const Root = () => {
   return (

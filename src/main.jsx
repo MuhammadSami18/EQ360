@@ -1,22 +1,17 @@
-import React, { useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Root from './Root.jsx'
-import Home from './Index/Home.jsx'
-import SignUp from './SignUp/SignUp.jsx'
-import SignIn from './SignIn/SignIn.jsx'
-import Help from './Help/Help.jsx'
-import Error from './components/404.jsx'
-import Packages from './Packages/Packages.jsx'
-import UserDetail from './Form/UserDetail.jsx'
-import CheckOut from './Checkout/CheckOut.jsx'
-import Dashboard from './Dashboard/Dashboard.jsx'
+import Home from './pages/index/Home.jsx'
+import SignUp from './pages/signup/SignUp.jsx'
+import SignIn from './pages/signin/SignIn.jsx'
+import CheckOut from './pages/checkout/CheckOut.jsx'
+import Packages from './pages/packages/Packages.jsx'
+import Error from './pages/404/404.jsx'
+import Dashboard from './pages/dashboard/Dashboard.jsx'
+import Help from './pages/help/Help.jsx'
+import UserDetail from './components/form/UserDetail.jsx'
 
-// const [packData,setPackData] = useState([])
-const CLick = (item) => {
-  alert('Thanks')
-}
 const router=createBrowserRouter([
   {
     path:'/',
@@ -36,7 +31,7 @@ const router=createBrowserRouter([
       },
       {
         path:'/help',
-        element:<Help/>
+        element:<Help />
       },
       {
         path:'/packages/:title/:id',
