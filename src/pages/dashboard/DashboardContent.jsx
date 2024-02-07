@@ -58,7 +58,7 @@ const DashboardContent = () => {
 
     // seeMore
     const [seeMore, setSeeMore] = useState(false)
-    const handleMore=()=>{
+    const handleMore = () => {
         seeMore ? setSeeMore(false) : setSeeMore(true)
         setSeeMore(!seeMore)
     }
@@ -153,7 +153,7 @@ const DashboardContent = () => {
                                             </Col>
                                         )
                                     })}
-                                    <Col span={24} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}> <Button onClick={handleMore}>{seeMore?'See Less':'See More'}</Button> </Col>
+                                    <Col span={24} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}> <Button onClick={handleMore}>{seeMore ? 'See Less' : 'See More'}</Button> </Col>
                                 </Row>
                                 <Divider style={{ borderWidth: '2px' }} />
                                 <Row gutter={[16, 16]}>
@@ -187,7 +187,7 @@ const DashboardContent = () => {
                         </div>
                     </Card>
                 </Col>
-            </Row>
+            </Row >
         </>
     )
 }
