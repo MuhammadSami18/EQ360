@@ -177,35 +177,40 @@ export const AssessmentResult = [
     }
 ]
 
-// scatter chart data
-export const ScatterData = [
-    {
-        name: "Self-Awarness",
-        data: [
-            [16.4, 5.4]
-        ]
-    },
-];
-
-export const ScatterOptionsData = {
-    chart: {
-        height: 350,
-        type: 'scatter',
-        zoom: {
-            enabled: true,
-            type: 'xy'
-        }
-    },
-    xaxis: {
-        tickAmount: 10,
-        labels: {
-            formatter: function (val) {
-                return parseFloat(val).toFixed(1)
+// Line chart data
+export const LineseriesData = [{
+    name: "Result",
+    data: [10,]
+}];
+export const LineoptionsData = (title) => {
+    const optionsData = {
+        chart: {
+            height: 350,
+            type: 'line',
+            zoom: {
+                enabled: false
             }
+        },
+        dataLabels: {
+            enabled: false
+        },
+        stroke: {
+            curve: 'straight'
+        },
+        title: {
+            text: title,
+            align: 'left'
+        },
+        grid: {
+            row: {
+                colors: ['#f3f3f3', 'transparent'],
+                opacity: 0.5
+            },
+        },
+        xaxis: {
+            categories: ['15/12/2024',],
         }
-    },
-    yaxis: {
-        tickAmount: 7
-    }
-};
-export const Competency=['Self-Awareness','Self-Management','Social Awareness','Relationship Skills','Responsible Decision Making','Motivation']
+    };
+    return optionsData;
+}
+export const Competency = ['Self-Awareness', 'Self-Management', 'Social Awareness', 'Relationship Skills', 'Responsible Decision Making', 'Motivation']

@@ -1,4 +1,4 @@
-import { DashboardOutlined, DesktopOutlined, FileOutlined, HomeOutlined, LogoutOutlined, PieChartOutlined, QuestionCircleOutlined, TeamOutlined, UserOutlined, } from '@ant-design/icons';
+import { AccountBookOutlined, BranchesOutlined, DashboardOutlined, HomeOutlined, LogoutOutlined,  QuestionCircleOutlined, UserOutlined, } from '@ant-design/icons';
 import { Button } from 'antd';
 import { Link } from 'react-router-dom';
 
@@ -12,15 +12,15 @@ function getItem(label, key, icon, children) {
     };
 }
 export const items = [
-    getItem('Option 1', '1', <PieChartOutlined />),
-    getItem('Option 2', '2', <DesktopOutlined />),
-    getItem('User', 'sub1', <UserOutlined />, [
-        getItem('Tom', '3'),
-        getItem('Bill', '4'),
-        getItem('Alex', '5'),
-    ]),
-    getItem('Team', 'sub2', <TeamOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
-    getItem('Files', '9', <FileOutlined />),
+    getItem('Dashboard', '1', <Link to={'/dashboard'}><DashboardOutlined /></Link>),
+    getItem('Account Access', '2', <Link to={'/dashboard/access'}><AccountBookOutlined /></Link>),
+    getItem('Childern', '9', <Link to={'/dashboard/children'}><BranchesOutlined /></Link>),
+    // getItem('User', 'sub1', <UserOutlined />, [
+    //     getItem('Tom', '3'),
+    //     getItem('Bill', '4'),
+    //     getItem('Alex', '5'),
+    // ]),
+    // getItem('Team', 'sub2', <TeamOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
 ];
 export const header = [
     getItem('MUHAMMAD SAMI', '1'),
@@ -141,7 +141,7 @@ export const columns = [
         width: '20%',
     },
     {
-        title:'Assessment For',
+        title: 'Assessment For',
         dataIndex: 'email',
         width: '30%',
     },
@@ -169,13 +169,13 @@ export const columns = [
         width: '40%',
     },
     {
-        title:'Action',
-        dataIndex:'action',
-        width:'20%'
+        title: 'Action',
+        dataIndex: 'action',
+        width: '20%'
     }
 ];
 
-export const DashTableData = (setOpen,setUserData) => {
+export const DashTableData = (setOpen, setUserData) => {
     const Tabledata = [
         {
             key: '1',
@@ -183,7 +183,7 @@ export const DashTableData = (setOpen,setUserData) => {
             email: 'carwel@crewal.com',
             date: '15/03/2024',
             address: 'New York No. 1 Lake Park',
-            action:<Button onClick={()=>{setOpen(true),setUserData(Tabledata[0])}}>See Result</Button>,
+            action: <Button onClick={() => { setOpen(true), setUserData(Tabledata[0]) }}>See Result</Button>,
         },
         {
             key: '2',
@@ -191,7 +191,7 @@ export const DashTableData = (setOpen,setUserData) => {
             email: 'carwel@crewal.com',
             date: '15/03/2024',
             address: 'London No. 1 Lake Park',
-            action:<Button onClick={()=>{setOpen(true),setUserData(Tabledata[1])}}>See Result</Button>
+            action: <Button onClick={() => { setOpen(true), setUserData(Tabledata[1]) }}>See Result</Button>
         },
         {
             key: '3',
@@ -199,7 +199,7 @@ export const DashTableData = (setOpen,setUserData) => {
             email: 'carwel@crewal.com',
             date: '15/03/2024',
             address: 'Sydney No. 1 Lake Park',
-            action:<Button onClick={()=>{setOpen(true),setUserData(Tabledata[2])}}>See Result</Button>
+            action: <Button onClick={() => { setOpen(true), setUserData(Tabledata[2]) }}>See Result</Button>
         },
         {
             key: '4',
@@ -207,10 +207,10 @@ export const DashTableData = (setOpen,setUserData) => {
             email: 'carwel@crewal.com',
             date: '15/03/2024',
             address: 'London No. 2 Lake Park',
-            action:<Button onClick={()=>{setOpen(true),setUserData(Tabledata[3])}}>See Result</Button>
+            action: <Button onClick={() => { setOpen(true), setUserData(Tabledata[3]) }}>See Result</Button>
         },
     ];
-  return Tabledata
+    return Tabledata
 }
 
 // table data end

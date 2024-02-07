@@ -20,7 +20,6 @@ const PaypalCheckOut = ({ value }) => {
             },
             onApprove: async (data, actions) => {
                 const order = await actions.order.capture();
-                console.log(order)
                 alert('You have successful purchase the package')
             }
         })
