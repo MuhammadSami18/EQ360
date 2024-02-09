@@ -64,10 +64,16 @@ const DashboardHome = () => {
     const handleMore = () => {
         seeMore ? setSeeMore(false) : setSeeMore(true)
         setSeeMore(!seeMore)
+        if (moreGraph) {
+            setMoreGraph(false)
+        }    
     }
     const handleGraph = () => {
         moreGraph ? setMoreGraph(false) : setMoreGraph(true)
         setMoreGraph(!moreGraph)
+        if (seeMore) {
+            setSeeMore(false)
+        } 
     }
 
     return (

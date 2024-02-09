@@ -3,53 +3,79 @@
 @tailwind utilities;
 
 body {
-    font-family: 'Raleway', sans-serif, "Helvetica Neue", Helvetica;
+  font-family: "Raleway", sans-serif, "Helvetica Neue", Helvetica;
 }
 
 .feature {
-    font-feature-settings: "lnum";
+  font-feature-settings: "lnum";
 }
 
 .ant-layout-sider-trigger {
-    background-color: #fff !important;
+  background-color: #fff !important;
 }
 
 .ant-layout-sider-trigger:hover {
-    background-color: #e5e7eb !important;
+  background-color: #e5e7eb !important;
 }
 
 .anticon-left {
-    color: black !important;
+  color: black !important;
 }
 
 .anticon-right {
-    color: black !important;
+  color: black !important;
 }
 
 .ant-menu-item-selected {
-    color: #fff !important;
-    background: #259A75 !important;
+  color: #fff !important;
+  background: #259a75 !important;
 }
 
 .ant-menu-submenu-selected .ant-menu-submenu-title {
-    color: #259A75 !important;
+  color: #259a75 !important;
 }
 
 .dashboard .ant-menu-item-active {
-    background: #e5e7eb !important;
-    color: black !important;
+  background: #e5e7eb !important;
+  color: black !important;
 }
 
 .dashboard .ant-menu-item-active::after {
-    border-bottom-color: transparent !important;
+  border-bottom-color: transparent !important;
 }
 
 .dashboard .ant-menu-item-selected::after {
-    border-bottom-color: transparent !important;
+  border-bottom-color: transparent !important;
 }
-.dashboard .ant-menu .ant-menu-item:first-child{
-    flex: 1;
+.dashboard .ant-menu .ant-menu-item:first-child {
+  flex: 1;
 }
-#scrollableDiv .ant-pagination{
-    display: none;
+#scrollableDiv .ant-pagination {
+  display: none;
+}
+.ant-btn-primary {
+  background-color: #4299e1 !important;
+}
+
+.ant-btn-primary:hover {
+  background-color: #1c64f2 !important;
+}
+
+.inputFiled {
+  border-width: 1px !important;
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(170 170 170 / var(--tw-border-opacity)) !important;
+  border-radius: 0.375rem !important;
+}
+.inputFiled:focus-within {
+  outline: 2px solid transparent !important;
+  outline-offset: 2px !important;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
+    var(--tw-ring-offset-width) var(--tw-ring-offset-color) !important;
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+    calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+    var(--tw-shadow, 0 0 #0000) !important;
+  --tw-ring-opacity: 1 !important;
+  --tw-ring-color: rgb(37 154 117 / var(--tw-ring-opacity)) !important;
 }
