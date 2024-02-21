@@ -54,11 +54,11 @@ body {
   display: none;
 }
 .ant-btn-primary {
-  background-color: #4299e1 !important;
+  background-color: #259A75 !important;
 }
 
 .ant-btn-primary:hover {
-  background-color: #1c64f2 !important;
+  background-color: #238667 !important;
 }
 
 .inputFiled {
@@ -78,4 +78,8 @@ body {
     var(--tw-shadow, 0 0 #0000) !important;
   --tw-ring-opacity: 1 !important;
   --tw-ring-color: rgb(37 154 117 / var(--tw-ring-opacity)) !important;
+}
+
+.ant-checkbox{
+  border: 1px solid black !important;
 }

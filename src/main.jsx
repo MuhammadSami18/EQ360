@@ -13,7 +13,6 @@ import Help from './pages/help/Help.jsx'
 import UserDetail from './components/form/UserDetail.jsx'
 import DashboardHome from './pages/dashboard/DashboardHome.jsx'
 import DashboardChildren from './pages/dashboard/DashboardChildern.jsx'
-import DashboardAccess from './pages/dashboard/DashboardAccess.jsx'
 
 const router=createBrowserRouter([
   {
@@ -66,10 +65,6 @@ const router=createBrowserRouter([
         path:'/dashboard/children',
         element:<DashboardChildren />,
       },
-      {
-        path:'/dashboard/access',
-        element:<DashboardAccess />,
-      }
     ]
   }
 ])

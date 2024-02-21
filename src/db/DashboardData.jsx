@@ -1,4 +1,4 @@
-import { AccountBookOutlined, BranchesOutlined, DashboardOutlined, HomeOutlined, LogoutOutlined,  QuestionCircleOutlined, UserOutlined, } from '@ant-design/icons';
+import { DashboardOutlined, LogoutOutlined, QuestionCircleOutlined, TeamOutlined, UserOutlined, } from '@ant-design/icons';
 import { Button } from 'antd';
 import { Link } from 'react-router-dom';
 
@@ -13,14 +13,7 @@ function getItem(label, key, icon, children) {
 }
 export const items = [
     getItem('Dashboard', '1', <Link to={'/dashboard'}><DashboardOutlined /></Link>),
-    getItem('Account Access', '2', <Link to={'/dashboard/access'}><AccountBookOutlined /></Link>),
-    getItem('Childern', '9', <Link to={'/dashboard/children'}><BranchesOutlined /></Link>),
-    // getItem('User', 'sub1', <UserOutlined />, [
-    //     getItem('Tom', '3'),
-    //     getItem('Bill', '4'),
-    //     getItem('Alex', '5'),
-    // ]),
-    // getItem('Team', 'sub2', <TeamOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
+    getItem('Childern', '9', <Link to={'/dashboard/children'}><TeamOutlined /></Link>)
 ];
 export const header = [
     getItem('MUHAMMAD SAMI', '1'),
@@ -104,17 +97,6 @@ export const DounutChart = {
         ],
     },
 };
-
-export const BreadData = [
-    {
-        title: 'Home',
-        icon: <HomeOutlined />
-    },
-    {
-        title: 'Dashboard',
-        icon: <DashboardOutlined />
-    }
-]
 
 // table data starts
 export const columns = [
@@ -214,3 +196,42 @@ export const DashTableData = (setOpen, setUserData) => {
 }
 
 // table data end
+
+// child table data start
+export const ChildColumns = [
+    {
+        title: 'First Name',
+        dataIndex: 'fname',
+    },
+    {
+        title: 'Last Name',
+        dataIndex: 'lname',
+    },
+    {
+        title: 'Email',
+        dataIndex: 'email',
+    },
+    {
+        title: 'Grade',
+        dataIndex: 'grade',
+    },
+    {
+        title:'Last Assigned Assessment',
+        dataIndex: 'lastAssess',
+    },
+    {
+        title: 'Last Assessment Status',
+        dataIndex: 'status',
+    }
+];
+export const ChildData = [
+    // {
+    //     key: '1',
+    //     fname: 'Muhammad',
+    //     lname: 'Sami',
+    //     email: 'm.sami@85.com',
+    //     grade:'15th',
+    //     zip: '12345'
+    // },
+];
+// child table data end

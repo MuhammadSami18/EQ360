@@ -2,7 +2,7 @@ import { Breadcrumb, Button, Card, Col, Progress, Row, Skeleton, Table, theme } 
 import ReactApexChart from 'react-apexcharts';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { BarChart, DashTableData, DounutChart, columns } from '../../db/DashboardData';
-import { AreaChartOutlined, HomeOutlined, SolutionOutlined, SoundFilled, UserOutlined } from '@ant-design/icons';
+import { AreaChartOutlined, SolutionOutlined, SoundFilled, UserOutlined } from '@ant-design/icons';
 import useSpeechSynthesis from '../../components/hook/useSpeechSynthesis';
 import { useState } from 'react';
 import { Divider } from 'antd';
@@ -11,7 +11,6 @@ import { Avatar } from 'antd';
 import { useEffect } from 'react';
 import { Drawer } from 'antd';
 import { AssessmentResult, Competency, LineoptionsData, LineseriesData } from '../../db/Result';
-import BreadcrumbItem from 'antd/es/breadcrumb/BreadcrumbItem';
 import { Content } from 'antd/es/layout/layout';
 
 const DashboardHome = () => {
@@ -79,9 +78,16 @@ const DashboardHome = () => {
     return (
         <Content style={{ margin: '0 16px', }} >
             <div className=' text-2xl text-[#259A75] pt-2 font-semibold'>Professional Dashboard</div>
-            <Breadcrumb style={{ margin: '16px 0',fontSize:'16px' }} >
-                <BreadcrumbItem><HomeOutlined style={{color: '#4dcb02',paddingRight:'8px'}}/>Dashboard</BreadcrumbItem>
-            </Breadcrumb>
+            <Breadcrumb style={{ margin: '16px 0',fontSize:'16px' }} items={
+                [
+                    {
+                        title:'Home'
+                    },
+                    {
+                        title:'Dashboard'
+                    }
+                ]
+            } />
             <Row style={{ padding: 24, background: colorBgContainer, borderRadius: borderRadiusLG, }} >
                 <div className=' text-2xl text-[#259A75] font-semibold'>Good Afternoon, Muhammad Sami</div>
                 <div className='text-[#5e6e82] leading-6'>{text}
